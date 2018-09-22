@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skywang.widget"
+    android:versionCode="1"
+    android:versionName="1.0" 
+    android:installLocation= "internalOnly">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+        声明widget对应的AppWidgetProvider
+        android:priority="1000" 
+        android:persistent="true"
+        android:allowBackup="true"
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/calendar_256px_1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!-- 声明widget对应的AppWidgetProvider -->
+        <receiver android:name=".ExampleAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.skywang.widget.UPDATE_ALL" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/example_appwidget_info" />
+        </receiver>
+
+        <service android:name=".ExampleAppWidgetService" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.EXAMPLE_APP_WIDGET_SERVICE" />
+            </intent-filter>
+        </service>
+        
+        <activity 
+            android:name="com.skywang.widget.MyDeskclock"
+            android:theme="@android:style/Theme.Translucent">     
+        </activity>
+        <activity 
+            android:name="com.skywang.widget.MyWeather"
+            android:theme="@android:style/Theme.Translucent">     
+        </activity>
+        <activity 
+            android:name="com.skywang.widget.MyKuaikai"
+            android:theme="@android:style/Theme.Translucent">     
+        </activity>
+        <activity 
+            android:name="com.kuaikai.Kuaikai"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">     
+        </activity>
+        <activity 
+            android:name="com.skywang.widget.MyCalendar"
+            android:theme="@android:style/Theme.Translucent">     
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+            <LinearLayout
+                android:id="@+id/LinearLayout_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_datetime"
+                    android:layout_width="143dip"
+                    android:layout_height="45dip"
+                    android:gravity="center"
+                    android:text="12:12:12"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="35.5dip"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_lunar_ymd"
+                    android:layout_width="177dip"
+                    android:layout_height="45dip"
+                    android:gravity="center"
+                    android:text="丁酉正月初一"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="29.6dip"
+                    android:textStyle="normal" />
+                <!-- android:textStyle="bold" android:typeface="monospace" -->
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end" >
+
+                <TextView
+                    android:id="@+id/tv_getConstellation"
+                    android:layout_width="85dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="水平座"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dip" />
+
+                <TextView
+                    android:id="@+id/textView_lunar_bazi"
+                    android:layout_width="235dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="[猪|闰]乙亥甲申乙亥壬午三更一刻"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dip" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="fill_parent"
+                android:layout_height="18dip"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="公元 2017年01月31 周六 公历年365天第58天这月28天  农历年384天 第31天这月30天  闰六月"
+                android:textColor="@android:color/black"
+                android:textSize="15dip" >
+
+                <requestFocus
+                    android:duplicateParentState="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

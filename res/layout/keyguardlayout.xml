@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_lunar_ymd2"
+        android:layout_width="fill_parent"
+        android:layout_height="15dip"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="丁酉正月初一"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15dip"
+        android:textStyle="normal" >
+
+        <requestFocus
+            android:duplicateParentState="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+    </TextView>
+
+</RelativeLayout>
